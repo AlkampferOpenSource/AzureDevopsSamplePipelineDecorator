@@ -1,0 +1,7 @@
+steps:
+- task: CmdLine@2
+  displayName: "do a git clean (injected from decorator)"
+  inputs:
+    workingDirectory: $(Build.SourcesDirectory)
+    failOnStderr: false
+    script: git clean -xdf
